@@ -1,0 +1,245 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #1a1a1a;
+    color: #fff;
+    line-height: 1.6;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+    display: flex;
+}
+
+
+
+img {
+    border-radius: 1000px;
+    width: 300px;
+    height: 300px;
+    border-radius: 100px;
+
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+header h1 {
+    font-size: 2.8rem;
+    color: #d4af37;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 3px solid #d4af37;
+    animation: typing 3s steps(30) forwards, blink 0.7s infinite;
+    margin-bottom: 0.5rem;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #d4af37;
+    margin-bottom: 0.4rem;
+    font-weight: 600;
+}
+
+.contact-info {
+    font-size: 0.95rem;
+    color: #e9e9e9;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.contact-icons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    margin: 1.5rem 0;
+    flex-wrap: wrap;
+}
+
+.contact-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background: #2c2c2c;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.contact-icons a:hover {
+    transform: translateY(-4px) scale(1.1);
+    box-shadow: 0 8px 20px rgba(212, 175, 55, 0.25);
+}
+
+.contact-icons img {
+    width: 24px;
+    height: 24px;
+    filter: brightness(0) invert(76%) sepia(41%) saturate(500%) hue-rotate(10deg) brightness(105%);
+}
+
+.section {
+    background: linear-gradient(135deg, #2c2c2c 0%, #222 100%);
+    padding: 1.8rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    border-left: 4px solid #d4af37;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease;
+}
+
+.section:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(212, 175, 55, 0.15);
+}
+
+.section h2 {
+    position: relative;
+    display: inline-block;
+    font-size: 1.6rem;
+    color: #d4af37;
+    margin-bottom: 1rem;
+    padding-bottom: 8px;
+}
+
+.section h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    background: #d4af37;
+    transition: width 0.4s ease;
+}
+
+.section:hover h2::after {
+    width: 100%;
+}
+
+.list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.list li {
+    margin-bottom: 0.8rem;
+    position: relative;
+    padding-left: 1.4rem;
+}
+
+.list li::before {
+    content: '▹';
+    color: #d4af37;
+    position: absolute;
+    left: 0;
+}
+
+.projects-list {
+    display: grid;
+    gap: 1.5rem;
+    padding-left: 0;
+    list-style: none;
+}
+
+@media (min-width: 768px) {
+    .projects-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.project-item {
+    background: #2a2a2a;
+    padding: 1.2rem;
+    border-radius: 10px;
+    border-left: 3px solid #d4af37;
+    transition: all 0.3s ease;
+}
+
+.project-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(212, 175, 55, 0.2);
+}
+
+.project-item strong {
+    display: block;
+    color: #d4af37;
+    font-size: 1.1rem;
+    margin-bottom: 0.4rem;
+}
+
+.project-item p {
+    font-size: 0.94rem;
+    margin: 0.5rem 0;
+    color: #ddd;
+}
+
+.project-item a {
+    color: #d4af37;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.project-item a:hover {
+    text-decoration: underline;
+}
+
+footer .list li:last-child {
+    margin-top: 1rem;
+    font-style: italic;
+    color: #d4af37;
+}
+
+#particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.12;
+}
+
+.perfil {
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 2.2rem;
+    }
+
+    .contact-icons {
+        gap: 1rem;
+    }
+
+    .section {
+        padding: 1.4rem;
+    }
+}
